@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shefa Flows | Sacred Waters & Natural Healing</title>
+    <link rel="stylesheet" type="text/css" href="styling.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-logo">Shefa Flows</div>
+            <div class="nav-links">
+                <a href="#shop">Shop</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Product Section -->
+    <div class="product-container">
+        <!-- Image Gallery -->
+        <div class="gallery-section">
+            <div class="main-image">
+                <img id="mainImg" src="IMG_2351.jpeg" alt="Ubuntu Sacred Waters">
+            </div>
+            <div class="thumbnail-container">
+                <img class="thumbnail active" src="IMG_2351.jpeg" onclick="changeImage('IMG_2351.jpeg')" alt="Product view 1">
+                <img class="thumbnail" src="IMG_2352.jpeg" onclick="changeImage('IMG_2352.jpeg')" alt="Product view 2">
+                <img class="thumbnail" src="IMG_2353.jpeg" onclick="changeImage('IMG_2353.jpeg')" alt="Product view 3">
+                <img class="thumbnail" src="0f74a116-f77e-4f16-8ac5-a8be919ef37e.jpeg" onclick="changeImage('0f74a116-f77e-4f16-8ac5-a8be919ef37e.jpeg')" alt="Product view 4">
+            </div>
+        </div>
+
+        <!-- Product Details -->
+        <div class="product-details">
+            <div class="product-badges">
+                <span class="badge">Sacred Healing</span>
+                <span class="badge">Organic</span>
+                <span class="badge">Handcrafted</span>
+            </div>
+            
+            <h1 class="product-title">Shefa Sacred Waters</h1>
+            <h2 class="product-subtitle">Ancient Botanicals & Healing Mist</h2>
+            
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span class="review-count">(127 Reviews)</span>
+            </div>
+
+            <div class="price-section">
+                <span class="price">R 450.00</span>
+                <span class="original-price">R 550.00</span>
+            </div>
+
+            <div class="product-description">
+                <p>
+                    Shefa Sacred Waters is a mystical healing mist crafted with traditional South African botanicals 
+                    and ancient wisdom. This powerful essence combines the aromatic beauty of indigenous flowers with 
+                    sacred herbs, creating a transformative experience for mind, body, and spirit.
+                </p>
+                <p>
+                    Each bottle is hand-blessed and contains ethically harvested ingredients from the heart of Southern 
+                    Africa. Perfect for spiritual cleansing, meditation, or as a natural aromatherapy spray.
+                </p>
+            </div>
+
+            <div class="quantity-section">
+                <label>Quantity:</label>
+                <div class="quantity-controls">
+                    <button class="qty-btn" onclick="decreaseQty()">-</button>
+                    <input type="number" id="quantity" value="1" min="1">
+                    <button class="qty-btn" onclick="increaseQty()">+</button>
+                </div>
+            </div>
+
+            <button class="add-to-cart-btn">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+
+            <div class="product-info-tabs">
+                <div class="tab-headers">
+                    <button class="tab-btn active" onclick="showTab('ingredients')">Ingredients</button>
+                    <button class="tab-btn" onclick="showTab('usage')">Usage</button>
+                    <button class="tab-btn" onclick="showTab('benefits')">Benefits</button>
+                </div>
+
+                <div class="tab-content">
+                    <div id="ingredients" class="tab-pane active">
+                        <ul>
+                            <li>Wild-harvested Impepho (African Sage)</li>
+                            <li>Sacred Buchu Leaf</li>
+                            <li>Indigenous Honeybush</li>
+                            <li>Rooibos Extract</li>
+                            <li>Cape Aloe Essence</li>
+                            <li>Blessed Spring Water</li>
+                            <li>Pure Essential Oils</li>
+                        </ul>
+                    </div>
+
+                    <div id="usage" class="tab-pane">
+                        <p>Shake well before use. Spray 2-3 times around your space, body, or pillow. 
+                        Use during meditation, before sleep, or whenever you need spiritual cleansing and protection.</p>
+                        <p>For best results, set intentions while spraying and allow the mist to settle naturally.</p>
+                    </div>
+
+                    <div id="benefits" class="tab-pane">
+                        <ul>
+                            <li>Spiritual cleansing and protection</li>
+                            <li>Promotes calm and inner peace</li>
+                            <li>Enhances meditation practice</li>
+                            <li>Purifies energy in spaces</li>
+                            <li>Supports emotional balance</li>
+                            <li>100% natural and organic</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shipping-info">
+                <i class="fas fa-truck"></i>
+                <span>Free shipping on orders over R 500</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="feature-box">
+                <i class="fas fa-leaf"></i>
+                <h3>100% Organic</h3>
+                <p>Ethically sourced indigenous botanicals</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>Handcrafted</h3>
+                <p>Made with love and ancient wisdom</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-seedling"></i>
+                <h3>Sustainable</h3>
+                <p>Supporting local communities</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-heart"></i>
+                <h3>Healing Power</h3>
+                <p>Traditional healing properties</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">What Our Community Says</h2>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"This sacred mist has transformed my meditation practice. The scent is divine and the energy is pure. Highly recommend!"</p>
+                    <p class="review-author">- Thandi M.</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Beautiful product with authentic African botanicals. I use it every morning and evening. Worth every rand!"</p>
+                    <p class="review-author">- Sipho K.</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The quality is exceptional. You can feel the love and care that went into making this. My home feels so peaceful now."</p>
+                    <p class="review-author">- Naledi S.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Shefa Flows</h3>
+                    <p>Bringing ancient African wisdom to modern wellness. Handcrafted with love in South Africa.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shefa Flows. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
