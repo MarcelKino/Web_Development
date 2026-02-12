@@ -4,220 +4,464 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shefa Flows | Sacred Waters & Natural Healing</title>
+    <title>Shefa Flows | Sacred Return to Ancestral Healing</title>
     <link rel="stylesheet" type="text/css" href="styling.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
+    <!-- Intro Page -->
+    <section id="intro-page" class="intro-page active-section">
+        <div class="intro-content">
+            <h1 class="intro-heading">Shefa Flows</h1>
+            <h2 class="intro-tagline">As within so without</h2>
+            <div class="intro-text">
+                <p>Shefa (שפע) is the divine flow of abundance — the life force that nourishes all creation. In ancient mystical understanding, Shefa is not something we chase, but something we allow. When the body, mind, and spirit are clear, this flow moves freely, bringing vitality, clarity, connection, and peace.</p>
+                <p>Shefa Flows exists to help restore that flow — gently, naturally, and with reverence.</p>
+            </div>
+            <button class="enter-button" onclick="enterGarden()">Enter the Garden</button>
+        </div>
+    </section>
+
+    <!-- Video Transition -->
+    <section id="video-section" class="video-section">
+        <video id="nature-video" class="nature-video" muted playsinline>
+            <source src="nature-garden.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+            <h1 class="video-text fade-in">Shefa Flows</h1>
+            <h2 class="video-subtext fade-in-delay">As within So without</h2>
+        </div>
+        <p class="video-subtitle">A sacred return to ancestral healing, plant intelligence, and the natural flow of abundance.</p>
+    </section>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav" id="main-nav">
+        <div class="nav-container">
             <div class="nav-logo">Shefa Flows</div>
-            <div class="nav-links">
-                <a href="#shop">Shop</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            <div class="nav-screens">
+                <button onclick="showScreen('home')" class="nav-btn active">Home</button>
+                <button onclick="showScreen('remedies')" class="nav-btn">Remedies</button>
+                <button onclick="showScreen('handmade')" class="nav-btn">Handmade</button>
+                <button onclick="showScreen('growing')" class="nav-btn">Growing</button>
+                <button onclick="showScreen('journal')" class="nav-btn">Journal</button>
+                <button onclick="showScreen('philosophy')" class="nav-btn">Philosophy</button>
+                <button onclick="showScreen('contact')" class="nav-btn">Walk With Us</button>
             </div>
         </div>
     </nav>
 
-    <!-- Main Product Section -->
-    <div class="product-container">
-        <!-- Image Gallery -->
-        <div class="gallery-section">
-            <div class="main-image">
-                <img id="mainImg" src="IMG_2351.jpeg" alt="Ubuntu Sacred Waters">
-            </div>
-            <div class="thumbnail-container">
-                <img class="thumbnail active" src="IMG_2351.jpeg" onclick="changeImage('IMG_2351.jpeg')" alt="Product view 1">
-                <img class="thumbnail" src="IMG_2352.jpeg" onclick="changeImage('IMG_2352.jpeg')" alt="Product view 2">
-                <img class="thumbnail" src="IMG_2353.jpeg" onclick="changeImage('IMG_2353.jpeg')" alt="Product view 3">
-                <img class="thumbnail" src="0f74a116-f77e-4f16-8ac5-a8be919ef37e.jpeg" onclick="changeImage('0f74a116-f77e-4f16-8ac5-a8be919ef37e.jpeg')" alt="Product view 4">
+    <!-- Home Page / Screen Home -->
+    <section id="screen-home" class="screen active-screen">
+        <div class="home-hero">
+            <h1 class="main-heading">Shefa Flows</h1>
+            <p class="main-subtitle">Shefa Flows is a holistic wellness sanctuary rooted in ancient wisdom, African and traditional remedies, and the divine intelligence of the body. Here, healing is slow, intentional, and alive — guided by the understanding that when the vessel is supported, life force flows naturally.</p>
+        </div>
+
+        <div class="pillars-section">
+            <h2 class="section-title">Our Way of Healing</h2>
+            
+            <div class="four-pillars">
+                <div class="pillar">
+                    <h3>Ancestral Wisdom</h3>
+                    <p>We honor the remedies, rituals, and plant knowledge that sustained life long before chemicals and shortcuts.</p>
+                </div>
+
+                <div class="pillar">
+                    <h3>Whole-Being Support</h3>
+                    <p>We recognize that the liver holds emotion, the gut holds fear, the heart holds memory, and the nervous system holds safety.</p>
+                </div>
+
+                <div class="pillar">
+                    <h3>Plant & Mineral Intelligence</h3>
+                    <p>Plants are not trends. They are teachers. We work with their intelligence, not against it.</p>
+                </div>
+
+                <div class="pillar">
+                    <h3>Nervous-System Safety</h3>
+                    <p>Healing happens when the body feels safe. Every word, product, and design choice reflects this truth.</p>
+                </div>
             </div>
         </div>
 
-        <!-- Product Details -->
-        <div class="product-details">
-            <div class="product-badges">
-                <span class="badge">Sacred Healing</span>
-                <span class="badge">Organic</span>
-                <span class="badge">Handcrafted</span>
-            </div>
-            
-            <h1 class="product-title">Shefa Sacred Waters</h1>
-            <h2 class="product-subtitle">Ancient Botanicals & Healing Mist</h2>
-            
-            <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <span class="review-count">(127 Reviews)</span>
-            </div>
-
-            <div class="price-section">
-                <span class="price">R 450.00</span>
-                <span class="original-price">R 550.00</span>
-            </div>
-
-            <div class="product-description">
-                <p>
-                    Shefa Sacred Waters is a mystical healing mist crafted with traditional South African botanicals 
-                    and ancient wisdom. This powerful essence combines the aromatic beauty of indigenous flowers with 
-                    sacred herbs, creating a transformative experience for mind, body, and spirit.
-                </p>
-                <p>
-                    Each bottle is hand-blessed and contains ethically harvested ingredients from the heart of Southern 
-                    Africa. Perfect for spiritual cleansing, meditation, or as a natural aromatherapy spray.
-                </p>
-            </div>
-
-            <div class="quantity-section">
-                <label>Quantity:</label>
-                <div class="quantity-controls">
-                    <button class="qty-btn" onclick="decreaseQty()">-</button>
-                    <input type="number" id="quantity" value="1" min="1">
-                    <button class="qty-btn" onclick="increaseQty()">+</button>
-                </div>
-            </div>
-
-            <button class="add-to-cart-btn">
-                <i class="fas fa-shopping-cart"></i> Add to Cart
-            </button>
-
-            <div class="product-info-tabs">
-                <div class="tab-headers">
-                    <button class="tab-btn active" onclick="showTab('ingredients')">Ingredients</button>
-                    <button class="tab-btn" onclick="showTab('usage')">Usage</button>
-                    <button class="tab-btn" onclick="showTab('benefits')">Benefits</button>
-                </div>
-
-                <div class="tab-content">
-                    <div id="ingredients" class="tab-pane active">
-                        <ul>
-                            <li>Wild-harvested Impepho (African Sage)</li>
-                            <li>Sacred Buchu Leaf</li>
-                            <li>Indigenous Honeybush</li>
-                            <li>Rooibos Extract</li>
-                            <li>Cape Aloe Essence</li>
-                            <li>Blessed Spring Water</li>
-                            <li>Pure Essential Oils</li>
-                        </ul>
-                    </div>
-
-                    <div id="usage" class="tab-pane">
-                        <p>Shake well before use. Spray 2-3 times around your space, body, or pillow. 
-                        Use during meditation, before sleep, or whenever you need spiritual cleansing and protection.</p>
-                        <p>For best results, set intentions while spraying and allow the mist to settle naturally.</p>
-                    </div>
-
-                    <div id="benefits" class="tab-pane">
-                        <ul>
-                            <li>Spiritual cleansing and protection</li>
-                            <li>Promotes calm and inner peace</li>
-                            <li>Enhances meditation practice</li>
-                            <li>Purifies energy in spaces</li>
-                            <li>Supports emotional balance</li>
-                            <li>100% natural and organic</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shipping-info">
-                <i class="fas fa-truck"></i>
-                <span>Free shipping on orders over R 500</span>
-            </div>
+        <div class="permanent-footer">
+            <p>Healing is remembered, not forced.</p>
         </div>
-    </div>
+    </section>
 
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="container">
-            <div class="feature-box">
-                <i class="fas fa-leaf"></i>
-                <h3>100% Organic</h3>
-                <p>Ethically sourced indigenous botanicals</p>
+    <!-- Screen 1: Explore the Remedies -->
+    <section id="screen-remedies" class="screen">
+        <div class="screen-container">
+            <h2 class="screen-title">Explore the Remedies</h2>
+            
+            <div class="products-grid">
+                <!-- Products will be added here with images -->
+                <div class="product-card" data-product="diatomaceous-earth">
+                    <div class="product-image">
+                        <img src="IMG_2351.jpeg" alt="Diatomaceous Earth">
+                    </div>
+                    <h3>Diatomaceous Earth</h3>
+                    <p class="product-price">Price TBA</p>
+                    <p class="product-affirmation">"I release what no longer serves my flow."</p>
+                </div>
+
+                <div class="product-card" data-product="castor-oil">
+                    <div class="product-image">
+                        <img src="IMG_2352.jpeg" alt="Castor Oil">
+                    </div>
+                    <h3>Castor Oil</h3>
+                    <p class="product-price">Price TBA</p>
+                    <p class="product-affirmation">"My body knows how to soften and let go."</p>
+                </div>
+
+                <div class="product-card" data-product="hydrolyzed-collagen">
+                    <div class="product-image">
+                        <img src="IMG_2353.jpeg" alt="Hydrolyzed Collagen">
+                    </div>
+                    <h3>Hydrolyzed Collagen</h3>
+                    <p class="product-price">Price TBA</p>
+                    <p class="product-affirmation">"My structure supports my openness."</p>
+                </div>
+
+                <div class="product-card" data-product="amino-mag">
+                    <div class="product-image">
+                        <img src="0f74a116-f77e-4f16-8ac5-a8be919ef37e.jpeg" alt="Amino Mag">
+                    </div>
+                    <h3>Amino Mag</h3>
+                    <p class="product-price">Price TBA</p>
+                    <p class="product-affirmation">"I am allowed to relax."</p>
+                </div>
+
+                <div class="product-card" data-product="canna-drops">
+                    <div class="product-image">
+                        <img src="IMG_2351.jpeg" alt="Canna Drops">
+                    </div>
+                    <h3>Canna Drops</h3>
+                    <p class="product-price">Price TBA</p>
+                    <p class="product-affirmation">"I am safe to be present."</p>
+                </div>
+
+                <div class="product-card" data-product="canna-capsules">
+                    <div class="product-image">
+                        <img src="IMG_2352.jpeg" alt="Canna Capsules">
+                    </div>
+                    <h3>Canna Capsules</h3>
+                    <p class="product-price">Price TBA</p>
+                    <p class="product-affirmation">"Calm lives within me."</p>
+                </div>
+
+                <div class="product-card" data-product="canna-gummy-bears">
+                    <div class="product-image">
+                        <img src="IMG_2353.jpeg" alt="Canna Gummy Bears">
+                    </div>
+                    <h3>Canna Gummy Bears</h3>
+                    <p class="product-price">Price TBA</p>
+                    <p class="product-affirmation">"Joy is medicine."</p>
+                </div>
+
+                <div class="product-card" data-product="canna-balm">
+                    <div class="product-image">
+                        <img src="0f74a116-f77e-4f16-8ac5-a8be919ef37e.jpeg" alt="Canna Balm">
+                    </div>
+                    <h3>Canna Balm</h3>
+                    <p class="product-price">Price TBA</p>
+                    <p class="product-affirmation">"I return to my body gently."</p>
+                </div>
+
+                <div class="product-card" data-product="canna-body-butter">
+                    <div class="product-image">
+                        <img src="IMG_2351.jpeg" alt="Canna Body Butter">
+                    </div>
+                    <h3>Canna Body Butter</h3>
+                    <p class="product-price">Price TBA</p>
+                    <p class="product-affirmation">"My body is worthy of tenderness."</p>
+                </div>
+
+                <div class="product-card" data-product="canna-night-cream">
+                    <div class="product-image">
+                        <img src="IMG_2352.jpeg" alt="Canna Night Cream">
+                    </div>
+                    <h3>Canna Night Cream</h3>
+                    <p class="product-price">Price TBA</p>
+                    <p class="product-affirmation">"Healing unfolds while I rest."</p>
+                </div>
+
+                <div class="product-card" data-product="canna-anti-aging-serum">
+                    <div class="product-image">
+                        <img src="IMG_2353.jpeg" alt="Canna Anti-Aging Serum">
+                    </div>
+                    <h3>Canna Anti-Aging Serum</h3>
+                    <p class="product-price">Price TBA</p>
+                    <p class="product-affirmation">"My radiance deepens with time."</p>
+                </div>
+
+                <div class="product-card" data-product="canna-sex-lube">
+                    <div class="product-image">
+                        <img src="0f74a116-f77e-4f16-8ac5-a8be919ef37e.jpeg" alt="Canna Sex Lube">
+                    </div>
+                    <h3>Canna Sex Lube</h3>
+                    <p class="product-price">Price TBA</p>
+                    <p class="product-affirmation">"Creation flows through pleasure."</p>
+                </div>
             </div>
-            <div class="feature-box">
-                <i class="fas fa-hand-holding-heart"></i>
-                <h3>Handcrafted</h3>
-                <p>Made with love and ancient wisdom</p>
-            </div>
-            <div class="feature-box">
-                <i class="fas fa-seedling"></i>
-                <h3>Sustainable</h3>
-                <p>Supporting local communities</p>
-            </div>
-            <div class="feature-box">
-                <i class="fas fa-heart"></i>
-                <h3>Healing Power</h3>
-                <p>Traditional healing properties</p>
+
+            <div class="permanent-footer">
+                <p>Healing is remembered, not forced.</p>
             </div>
         </div>
     </section>
 
-    <!-- Reviews Section -->
-    <section class="reviews-section">
-        <div class="container">
-            <h2 class="section-title">What Our Community Says</h2>
+    <!-- Screen 2: Handmade by the Body -->
+    <section id="screen-handmade" class="screen">
+        <div class="screen-container">
+            <h2 class="screen-title">Handmade by the Body</h2>
+            <p class="screen-subtitle">Products, services, and sacred offerings crafted with intention</p>
             
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"This sacred mist has transformed my meditation practice. The scent is divine and the energy is pure. Highly recommend!"</p>
-                    <p class="review-author">- Thandi M.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Photography</h3>
+                    <p>Capturing the essence of your flow</p>
                 </div>
 
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"Beautiful product with authentic African botanicals. I use it every morning and evening. Worth every rand!"</p>
-                    <p class="review-author">- Sipho K.</p>
+                <div class="service-card">
+                    <i class="fas fa-spa"></i>
+                    <h3>Meditation</h3>
+                    <p>Guided journeys to inner stillness</p>
                 </div>
 
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"The quality is exceptional. You can feel the love and care that went into making this. My home feels so peaceful now."</p>
-                    <p class="review-author">- Naledi S.</p>
+                <div class="service-card">
+                    <i class="fas fa-music"></i>
+                    <h3>Sound Therapy</h3>
+                    <p>Vibrational healing for the nervous system</p>
                 </div>
+
+                <div class="service-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Affirmations</h3>
+                    <p>Words that restore your remembrance</p>
+                </div>
+            </div>
+
+            <div class="permanent-footer">
+                <p>Healing is remembered, not forced.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screen 3: Growing Remedies -->
+    <section id="screen-growing" class="screen growing-screen">
+        <div class="screen-container">
+            <div class="growing-message">
+                <h2 class="germinating-text">Germinating SOON!!!</h2>
+            </div>
+            
+            <div class="permanent-footer">
+                <p>Healing is remembered, not forced.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screen 4: The Flow Journal -->
+    <section id="screen-journal" class="screen">
+        <div class="screen-container">
+            <h2 class="screen-title">The Flow Journal</h2>
+            <p class="screen-subtitle">Words, reflections, and wisdom to support your journey.</p>
+            
+            <div class="journal-topics">
+                <div class="topic-card">
+                    <h3>Nervous System Healing</h3>
+                    <p>Understanding the language of safety in your body</p>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Organ-Emotion Connections</h3>
+                    <p>How grief lives in the liver, fear in the gut, memory in the heart</p>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Ancestral Wellness</h3>
+                    <p>Honoring the wisdom that sustained generations</p>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Ritual & Rhythm</h3>
+                    <p>Creating sacred containers for daily healing</p>
+                </div>
+            </div>
+
+            <div class="journal-wisdom">
+                <blockquote>
+                    <p>Healing is not something added to the body — it is something revealed when interference is removed.</p>
+                </blockquote>
+
+                <p>In ancient traditions, health was understood as harmony: between organs, emotions, spirit, land, and community. Modern systems fragmented this wisdom, isolating symptoms and silencing the body's language.</p>
+
+                <p>Shefa Flows exists to restore that language.</p>
+
+                <p>We work with the understanding of Shefa — the divine flow of life force — which moves through clear vessels with ease. When the vessel is burdened by toxins, stress, trauma, or disconnection, the flow weakens. Our remedies exist to support the body in clearing, softening, and remembering how to receive again.</p>
+
+                <p class="wisdom-tagline">As within, so without.</p>
+            </div>
+
+            <div class="permanent-footer">
+                <p>Healing is remembered, not forced.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screen 5: Our Philosophy -->
+    <section id="screen-philosophy" class="screen philosophy-screen">
+        <div class="screen-container philosophy-content">
+            <h2 class="screen-title">Our Philosophy</h2>
+            
+            <div class="philosophy-text">
+                <p class="philosophy-intro">We didn't set out to start a business.<br>We set out to remember.</p>
+
+                <p>For a long time, we watched people — ourselves included — move further away from their bodies while trying desperately to heal them. We were taught to override symptoms, silence signals, and distrust our own intelligence. Healing became loud, rushed, chemical, and disconnected from spirit.</p>
+
+                <p>But our bodies kept telling a different story.</p>
+
+                <p>We felt how stress lived in the organs.<br>
+                How grief sat in the liver.<br>
+                How fear tightened the gut.<br>
+                How exhaustion wasn't weakness — it was a message.</p>
+
+                <p>And we began to remember what our ancestors never forgot:<br>
+                <strong>the body is not broken. It is responding.</strong></p>
+
+                <p>Our path led us back to the old ways — African wisdom, traditional remedies, plants, oils, minerals, ritual, rest. Not as trends, but as lineage. As relationship. As sacred responsibility. We learned that healing was never meant to be forced. It was meant to be allowed.</p>
+
+                <p class="shefa-intro">That is where Shefa found us.</p>
+
+                <p>Shefa — the divine flow of abundance — is not about having more. It is about allowing life force to move freely when the vessel is clear. When the body feels safe. When the nervous system is supported. When we stop fighting ourselves.</p>
+
+                <p><strong>Shefa Flows was born from this understanding.</strong></p>
+
+                <p>We created this space as a sanctuary — not a store — where people could slow down, soften, and reconnect with the wisdom already living inside them. Every remedy offered here is chosen with reverence. Every word is intentional. Every design choice is made with the nervous system in mind.</p>
+
+                <p class="personal-note">This work is deeply personal to us.</p>
+
+                <div class="beliefs">
+                    <p>We do not believe in quick fixes.<br>
+                    We do not believe in fear-based healing.<br>
+                    We do not believe the body needs to be controlled.</p>
+
+                    <p>We believe healing is remembrance.<br>
+                    We believe plants are elders.<br>
+                    We believe abundance is meant to circulate.<br>
+                    We believe safety is the first medicine.</p>
+                </div>
+
+                <p>Shefa Flows exists so you don't have to abandon your body to heal it.<br>
+                So you don't have to choose between science and spirit.<br>
+                So you can return — gently — to what has always worked.</p>
+
+                <p class="closing">This is not our wisdom.<br>
+                We are only vessels.</p>
+
+                <p class="tagline">As within, so without.</p>
+            </div>
+
+            <div class="permanent-footer">
+                <p>Healing is remembered, not forced.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screen 6: Walk With Us (Contact) -->
+    <section id="screen-contact" class="screen contact-screen">
+        <div class="screen-container">
+            <h2 class="screen-title">Walk With Us</h2>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp Business</h3>
+                    <p><a href="https://wa.me/27725001243">072 500 1243</a></p>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p><a href="#">@shefaflows</a></p>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:hello@shefaflows.com">hello@shefaflows.com</a></p>
+                </div>
+            </div>
+
+            <div class="manifesto">
+                <p class="safe-message">You are safe to slow down here.</p>
+                
+                <h3 class="manifesto-title">The Manifesto of Shefa Flows</h3>
+                
+                <div class="manifesto-text">
+                    <p>Before healing was commercial, it was communal.<br>
+                    Before medicine was chemical, it was relational.<br>
+                    Before the body was treated as broken, it was trusted.</p>
+
+                    <p class="refusal">Shefa Flows was born as a refusal to forget.</p>
+
+                    <p>We remember when plants were elders,<br>
+                    when the liver was understood as emotion,<br>
+                    when rest was sacred,<br>
+                    and when abundance flowed without force.</p>
+
+                    <div class="beliefs-list">
+                        <p>We believe the body is not failing —<br>
+                        it is speaking.</p>
+
+                        <p>We believe symptoms are messengers.<br>
+                        We believe safety is the first medicine.<br>
+                        We believe pleasure is life force.<br>
+                        We believe healing multiplies when shared.</p>
+                    </div>
+
+                    <p>We walk slowly.<br>
+                    We choose integrity over scale.<br>
+                    We choose wisdom over trend.<br>
+                    We choose remembrance over repair.</p>
+
+                    <p class="brand-statement">This is not a brand.<br>
+                    This is a return.</p>
+
+                    <p class="tagline">As within, so without.</p>
+                </div>
+
+                <div class="closing-blessing">
+                    <p>You are not here to consume.<br>
+                    You are here to remember.</p>
+
+                    <p>May your body soften.<br>
+                    May your flow return.<br>
+                    May Shefa move through you and bless all it touches.</p>
+                </div>
+            </div>
+
+            <div class="permanent-footer">
+                <p>Healing is remembered, not forced.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plant Info Popup -->
+    <div id="plant-popup" class="plant-popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            <h3 id="popup-title"></h3>
+            <p id="popup-description"></p>
+            <p class="popup-redirect">Discover this remedy in our collection</p>
+        </div>
+    </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>Shefa Flows</h3>
-                    <p>Bringing ancient African wisdom to modern wellness. Handcrafted with love in South Africa.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#shop">Shop</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Connect</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Shefa Flows. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
 
     <!-- External JavaScript -->
     <script src="script.js"></script>
